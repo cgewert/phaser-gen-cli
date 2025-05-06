@@ -1,0 +1,36 @@
+const path = require('path');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+  entry: './src/main.js',
+  mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js',
+  },
+  module: {
+    rules: [
+    ],
+  },
+  devServer: {
+    watchFiles: "./src/..", // remove this line to disable Browser refresh
+    static: {
+      directory: path.join(__dirname, 'assets'),
+    },
+    compress: true,
+    port: {{WEBPACK_DEV_SERVER_PORT}},
+  },
+  target: 'web',
+  plugins: [
+    new CleanWebpackPlugin(),
+    new CopyPlugin({
+      patterns: [
+        {from: '*.css', context: 'src/'},
+        {from: 'src/index.html'},
+        {from: 'assets/images', to: 'assets/images/'},
+        {from: 'assets/audio', to: 'assets/audio/'},
+      ],
+    }),
+  ],
+};

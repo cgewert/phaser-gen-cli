@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "target": "ES2015",                     
+      "lib": ["DOM", "ES2015"],               
+      "module": "ESNext",                     
+      "moduleResolution": "Node",
+      "strict": true,                         
+      "esModuleInterop": true,                
+      "allowSyntheticDefaultImports": true,
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true,                   
+      "rootDir": "./src",                     
+      "sourceMap": true,                      
+      "resolveJsonModule": true,
+      "noImplicitAny": true,
+      "removeComments": false, // Set to true to remove comments in the output files
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "dist"]
+  }
+  // This configuration file is for a TypeScript project. It specifies the compiler options and includes/excludes certain files and directories from the compilation process. The target is set to ES2015, and the output directory is set to "dist" while the root directory is "src". The configuration also enables strict type checking and allows synthetic default imports.

@@ -1,0 +1,31 @@
+{
+  "name": "{{TITLE}}",
+  "version": "1.0.0",
+  "description": "{{PACKAGE_JSON_DESCRIPTION}}",
+  "main": "main.js",
+  "private": "true",
+  "engines": {
+    "node": ">=0.22"
+  },
+  "scripts": {
+    "prebuild": "tsc -p ./tsconfig.json",
+    "build": "webpack",
+    "start": "webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "{{AUTHOR}}",
+  "license": "ISC",
+  "dependencies": {
+    "phaser": "3.85.2"
+  },
+  "devDependencies": {
+    "@types/dat.gui": "0.7.13",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "13.0.0",
+    "dat.gui": "0.7.9",
+    "typescript": "5.8.3",
+    "webpack": "5.99.5",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.1"
+  }
+}

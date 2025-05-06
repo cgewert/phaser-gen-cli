@@ -1,0 +1,17 @@
+{
+  "name": "@dexter/phaser-gen-cli",
+  "version": "1.0.0",
+  "license": "CC0-1.0",
+  "exports": "./src/index.ts",
+  "compilerOptions": {
+    "lib": ["dom", "esnext", "deno.ns"]
+  },
+  "tasks": {
+    "dev": "deno run -R -W -E --allow-run src/index.ts",
+    "build": "deno compile -R -W -E --allow-run --output=phaser src/index.ts",
+    "test": "deno test --coverage=coverage -A"
+  },
+  "imports": {
+    "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7"
+  }
+}
